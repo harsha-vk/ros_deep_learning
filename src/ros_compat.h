@@ -35,6 +35,7 @@
 
 #include <ros/ros.h>
 #include <sensor_msgs/Image.h>
+#include <sensor_msgs/CameraInfo.hpp>
 #include <sensor_msgs/image_encodings.h>
 #include <vision_msgs/Classification2D.h>
 #include <vision_msgs/Detection2DArray.h>
@@ -78,6 +79,7 @@ template<typename T> static void __ros_declare_parameter( ros::NodeHandle& nh, c
 
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/image.hpp>
+#include <sensor_msgs/msg/camera_info.hpp>
 #include <sensor_msgs/image_encodings.hpp>
 
 #if ROS_DISTRO >= ROS_GALACTIC
@@ -106,6 +108,7 @@ namespace vision_msgs
 namespace sensor_msgs
 {
 	typedef msg::Image Image;
+	typedef msg::CameraInfo CameraInfo;
 	typedef msg::Image::SharedPtr ImagePtr;
 	typedef msg::Image::ConstSharedPtr ImageConstPtr;
 }
